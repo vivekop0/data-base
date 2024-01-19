@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="name-contianer">
+            <button onclick="getData()">Get list</button>
+        </div>
+    </div>
+
+    <script>
+      async  function getData(){
+    const response = await fetch("https://localhost:3000/users")
+    const finaldata = await response.json()
+    console.log(finaldata)
+  
+    // document.querySelector('div').innerHTML = JSON.stringify(finaldata.data[0].firstname)
+    
+   
+       
+    }
+    getData()
+        
+        
+
+    </script>
+</body>
+</html>
+
